@@ -1,0 +1,72 @@
+<html>
+<head> 
+    <title> 
+        Digital Media Studio, Assignment 2
+    </title>   
+
+    <style> 
+        .row{  
+            width:720px; 
+            margin: 10px auto 10px auto ; 
+        } 
+        .image-container {  
+            display: table-cell; 
+            vertical-align: middle; 
+            padding:20px; 
+        } 
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script> 
+
+</head>
+
+<body style="background-color:rgb(182, 244, 244);">  
+
+    <div class="row">
+        <div class="image-container"><img id="produce" src="img/produce_icon.png" onmousedown="this.src='img/produce_swap.png';" onmouseup="this.scr='img/produce_icon.png';" width= "250" height="200"/></div> 
+        <div class="image-container"><img id="sus" src="img/sus_icon.png" onmousedown="this.src='img/sus_swap.png';" onmouseup="this.scr='img/sus_icon.png';" width= "250" height="200"/></div> 
+        <div class="image-container"><img id="learn" src="img/learn_icon.png" onmousedown="this.src='img/learn_swap.png';" onmouseup="this.scr='img/learn_icon.png';" width= "250" height="200"/></div>
+    </div> 
+
+    <div class="row">  
+        <div class="image-container"><img id="network" src="img/network_icon.png" onmousedown="this.src='img/network_swap.png';" onmouseup="this.scr='img/network_icon.png';" width= "250" height="200"/></div> 
+        <div class="image-container"><img id="time" src="img/time_icon.png" onmousedown="this.src='img/time_swap.png';" onmouseup="this.scr='img/time_icon.png';" width= "250" height="200"/></div> 
+        <div class="image-container"><img id="brain" src="img/brain_icon.png" onmousedown="this.src='img/brain_swap.png';" onmouseup="this.scr='img/brain_icon.png';" width= "250" height="200"/></div> 
+    </div> 
+
+    <div class="row">
+        <div class="image-container"><img id="element" src="img/element_icon.png" onmousedown="this.src='img/element_swap.png';" onmouseup="this.scr='img/element_icon.png';" width= "250" height="200"/></div>   
+        <div class="image-container"><img id="bene" src="img/bene_icon.png" onmousedown="this.src='img/bene_swap.png';" onmouseup="this.scr='img/bene_icon.png';" width= "250" height="200"/></div>  
+        <div class="image-container"><img id="rules" src="img/rules_icon.png" onmousedown="this.src='img/rules_swap.png';" onmouseup="this.scr='img/rules_icon.png';" width= "250" height="200"/></div> 
+    </div> 
+
+    <script> 
+
+        var sound1 = new buzz.sound("sound/produce_sound.mp3");
+        var sound2 = new buzz.sound("sound/sus_sound.mp3");
+        var sound3 = new buzz.sound("sound/learn_sound.mp3"); 
+        var sound4 = new buzz.sound("sound/network_sound.mp3"); 
+        var sound5 = new buzz.sound("sound/time_sound.mp3"); 
+        var sound6 = new buzz.sound("sound/brain_sound.mp3"); 
+        var sound7 = new buzz.sound("sound/element_sound.mp3"); 
+        var sound8 = new buzz.sound("sound/bene_sound.mp3"); 
+        var sound9 = new buzz.sound("sound/rules_sound.mp3");  
+
+
+        window.onload = function() { 
+            document.getElementById('produce').addEventListener('mousedown', function () {sound1.play();}); 
+            document.getElementById('sus').addEventListener('mousedown', function () {sound2.play();}); 
+            document.getElementById('learn').addEventListener('mousedown', function () {sound3.play();});  
+            document.getElementById('network').addEventListener('mousedown', function () {sound4.play();}); 
+            document.getElementById('time').addEventListener('mousedown', function () {sound5.play();}); 
+            document.getElementById('brain').addEventListener('mousedown', function () {sound6.play();}); 
+            document.getElementById('element').addEventListener('mousedown', function () {sound7.play();}); 
+            document.getElementById('bene').addEventListener('mousedown', function () {sound8.play();});
+            document.getElementById('rules').addEventListener('mousedown', function () {sound9.play();});
+        }; 
+
+    </script> 
+
+</body>
+
+</html> 
